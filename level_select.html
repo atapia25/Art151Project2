@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Villains are on the loose!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <center>
+            <script>
+                function goblinClicked()
+                {
+                    document.getElementById('green_goblinId').onclick = "";
+                }
+            </script>
+            <h1 style="color:gold">
+                Which villain do you want to take on first?
+            </h1>
+            <div>
+                <a id="green_goblinId" href="green_goblin/stage_one.html" onclick="return goblinClicked()">
+                    <img id="green_goblin" src="media/green goblin.jpg" style="margin:10px 10px 10px 10px" alt="gg" width="338" height="432">
+                </a>
+                <a id="doctor_octopusId" href = "doctor_octopus/stage_one.html">
+                    <img id="doctor_octopus" src="media/doctor octopus.jpg" style="margin:10px 10px 10px 10px" alt="doc_ock" width="338" height="432">
+                </a>
+                <a id="venomId" href = "venom/stage_one.html">
+                    <img id="venom" src="media/venom.png" style="margin:10px 10px 10px 10px" alt="venom" width="338" height="432">
+                </a>
+            </div>
+        </center>
+    </body>
+</html>
