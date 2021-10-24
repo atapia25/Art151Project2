@@ -2,3 +2,15 @@ body {
     background-image: url('../Project2/media/background_web.png');
     background-color:darkblue;
 }
+
+.throw-punch {
+    cursor: url(cursor/boxing_glove.png), auto;
+}
+
+.spidey-idea {
+    cursor: url(cursor/idea.png), auto;
+}
+
+.go-web {
+    cursor: url(cursor/web.png), auto;
+}

@@ -11,10 +11,18 @@
     </head>
     <body>
         <center>
+            <h1 style="color:crimson; font-style:italic">
+                I gotta stop the Goblin! But how?
+            </h1>
+            <h1 style="color:gold">
+                You have entered a fight scene. Click on parts of the image and see what Spidey can do to defeat the Green Goblin!
+            </h1>
             <img src="villain standoff.jpg" width="1024" height="728" usemap="#standoff">
             <map name="standoff">
-                <area href="miss.html" alt="" coords="438, 560, 673, 170" shape="rect">
-                <area href="hit.html" alt="" coords="49, 704, 651, 557" shape="rect" onclick="saveValue()">
+                <area href="miss.html" alt="" coords="438, 560, 673, 170" shape="rect" id = "fight"
+                class="throw-punch">
+                <area href="hit.html" alt="" coords="49, 704, 651, 557" shape="rect" onclick="saveValue()" id = "fight"
+                class="throw-punch">
             </map>
         </center>
     </body>
