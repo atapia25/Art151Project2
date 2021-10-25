@@ -14,3 +14,11 @@ body {
 .go-web {
     cursor: url(cursor/web.png), auto;
 }
+
+.continue-page {
+    cursor: url(cursor/arrow.png), auto;
+}
+
+.take-picture {
+    cursor: url(cursor/camera.png), auto;
+}
