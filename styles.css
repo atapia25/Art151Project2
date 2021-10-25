@@ -22,3 +22,8 @@ body {
 .take-picture {
     cursor: url(cursor/camera.png), auto;
 }
+
+.retry{
+    height:100px;
+    width:200px;
+}
