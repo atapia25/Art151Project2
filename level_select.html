@@ -38,7 +38,7 @@
                     <img id="venom" src="media/venom.png" style="margin:10px 10px 10px 10px" alt="venom" width="338" height="432">
                 </a>
             </div>
-            <a href="ending_one.html"><button type="button">Go Back to Work</button></a>
+            <button type="button" id="endingButton" onclick="decideEnding()" href="">Go Back to Work</button></a>
         </center>
     </body>
     <script>
@@ -57,6 +57,56 @@
             document.getElementById("doctor_octopus").src = "media/doctor octopus_grey.jpg";
         }
         var venom = localStorage.getItem("villain3");
+        if(venom == "true")
+        {
+            console.log("true");
+            document.getElementById("venomId").removeAttribute("href");
+            document.getElementById("venom").src = "media/venom_grey.png";
+        }
+        function decideEnding()
+        {
+            var goblinPhotos = localStorage.getItem("goblinPhoto");
+            var octopusPhotos = localStorage.getItem("octopusPhoto");
+            var venomPhotos = localStorage.getItem("venomPhoto");
+            if(goblinPhotos == "false" && octopusPhotos == "false" && venomPhotos == "false")
+            {
+                //if the player just goes back to work without any pictures
+                location.href = "ending_one.html";
+            }
+            else if (goblinPhotos == "true")
+            {
+                if(octopusPhotos == "true")
+                {
+                    if(venomPhotos == "true")
+                    {
+                        //all three photos have been taken
+                        location.href = "ending_four.html";
+                    }
+                    else
+                    {
+                        //just two of the photos have been taken
+                        location.href = "ending_three.html";
+                    }
+                }
+                else if (venomPhotos == "true")
+                {
+                    if(octopusPhotos == "true")
+                    {
+                        //all three photos have been taken
+                        location.href = "ending_four.html";
+                    }
+                    else
+                    {
+                        //just two of the photos have been taken
+                        location.href = "ending_three.html";
+                    }
+                }
+                else
+                {
+                    location.href = "ending_two.html";
+                }
+            }
+        }
         console.log(window);
     </script>
 </html>

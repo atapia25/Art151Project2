@@ -4,32 +4,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Game Over</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <center>
-            <!--[if lt IE 7]>
-                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-            <![endif]-->
-            <h1 style="color: gold;">
-                The Amazing Spider-Man
+            <h2 style="color:red">
+                (temporary image)
+            </h2>
+            <h1 style="color: lime;">
+                "Parker! I need more pictures! You're better than this!"
             </h1>
-
-            <a href='daily_bugle.html'>
-                <img src="media/spider-man title.jpg" alt="title_screen" width="896" height="628">
-            </a>
-
-            <audio autoplay>
-                <source src="media/spider-man theme.mp3" type="audio/mpeg">
-            </audio>
-            
-
+            <img src="media/jjj ending_1.jpg">
+            <br>
+            <a href="level_select.html"><button class="retry">Try Again?</button></a>
         </center>
-
         <script>
+            //reset values
             localStorage.setItem('villain1', 'false');
             localStorage.setItem('villain2', 'false');
             localStorage.setItem('villain3', 'false');
@@ -37,7 +30,6 @@
             localStorage.setItem('goblinPhoto', 'false');
             localStorage.setItem('octopusPhoto', 'false');
             localStorage.setItem('venomPhoto', 'false');
-            console.log(window);
         </script>
     </body>
 </html>
