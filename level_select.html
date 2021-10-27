@@ -8,6 +8,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <style>
+            img
+            {
+                z-index: -1;
+            }
+
+        </style>
     </head>
     <body>
         <center>
@@ -21,7 +28,7 @@
                 Which villain do you want to take on first?
             </h1>
             <div>
-                <a id="green_goblinId" href="green_goblin/stage_one.html" onclick="return goblinClicked()">
+                <a id="green_goblinId" href="green_goblin/stage_one.html">
                     <img id="green_goblin" src="media/green goblin.jpg" style="margin:10px 10px 10px 10px" alt="gg" width="338" height="432">
                 </a>
                 <a id="doctor_octopusId" href = "doctor_octopus/stage_one.html">
@@ -34,4 +41,22 @@
             <a href="ending_one.html"><button type="button">Go Back to Work</button></a>
         </center>
     </body>
+    <script>
+        var goblin = localStorage.getItem("villain1");
+        if(goblin == "true")
+        {
+            console.log("true");
+            document.getElementById("green_goblinId").removeAttribute("href");
+            document.getElementById("green_goblin").src = "media/green_goblin_grey.jpg";
+        }
+        var octopus = localStorage.getItem("villain2");
+        if(octopus == "true")
+        {
+            console.log("true");
+            document.getElementById("doctor_octopusId").removeAttribute("href");
+            document.getElementById("doctor_octopus").src = "media/doctor octopus_grey.jpg";
+        }
+        var venom = localStorage.getItem("villain3");
+        console.log(window);
+    </script>
 </html>
