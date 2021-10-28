@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Level 3: Venom </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <center>
+            <h1 style="color: rebeccapurple;">
+                "Just ME AND YOU NOW, PARKER!!"
+            </h1>
+            <h1 style="color:crimson;">
+                "Eddie, I don't want to hurt you! I can help you!"
+            </h1>
+            <img src="venom_standoff.jpg" width="1024" height="560" usemap="#standoff" id="venomStandoff">
+            <map name="standoff" id="mapId">
+                <area href="venom_punch.html" coords="830,1,1023,214" shape="rect" class="throw-punch" id="punch">
+                <area href="venom_web.html" coords="831,292,1023,484" shape="rect" class="go-web" id="web">
+                <area href="iron_man.html" coords="124,121,103" shape="circle" id="helpBubble">
+            </map>
+        </center>
+        <script>
+            var vp = localStorage.getItem("punchVenom");
+            var vw = localStorage.getItem("webVenom");
+            if(vp == "true" && vw == "false")
+            {
+                document.getElementById("venomStandoff").src = "venom_standoff_v2-no-punch.jpg";
+                document.getElementById("punch").remove();
+            }
+            else if(vw == "true" && vp == "false")
+            {
+                //webbing venom did not work
+                document.getElementById("venomStandoff").src = "venom_standoff_v2-no-web.jpg";
+                document.getElementById("web").remove();
+            }
+            else if(vp == "true" && vw == "true")
+            {
+                //spidey is out of options until...
+                document.getElementById("venomStandoff").src = "venom_standoff_v2-no-options.jpg"; //change image
+                //do both just in case
+                document.getElementById("punch").remove();
+                document.getElementById("web").remove();
+                //create object for use in map
+            }
+        </script>
+    </body>
+</html>

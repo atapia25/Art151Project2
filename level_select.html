@@ -138,6 +138,40 @@
                     location.href = "ending_two.html";
                 }
             }
+            else if (venomPhotos == "true")
+            {
+                if(goblinPhotos == "true")
+                {
+                    if(octopusPhotos == "true")
+                    {
+                        //all three villains have photos
+                        location.href = "ending_four.html";
+                    }
+                    else
+                    {
+                        //just two villains
+                        location.href = "ending_three.html";
+                    }
+                }
+                else if (octopusPhotos == "true")
+                {
+                    if (goblinPhotos == "true")
+                    {
+                        //all three villains have photos
+                        location.href = "ending_four.html";                        
+                    }
+                    else
+                    {
+                        //just two villains
+                        location.href = "ending_four.html";
+                    }
+                }
+                else
+                {
+                    //only one villain has pictures
+                    location.href = "ending_two.html";
+                }
+            }
         }
         console.log(window);
     </script>
